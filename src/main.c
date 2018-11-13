@@ -17,7 +17,3 @@ int main(void)
     return 0;
 }
 
-
-
-Réduire 
-Zone de message
