@@ -1,8 +1,13 @@
-//  Copyright (c) 2018 Antoine Tran Tan
-//
+#include <TP_lib.h>
 
-#include "my_header.h"
-
-int main(void)
-{
+int main(void){
+	
+	short int LancerDe (void);
+	short resultat, i=0;
+	
+	while(i<10){
+		resultat = LancerDe();
+		i++;
+	}
+	return 0;
 }
