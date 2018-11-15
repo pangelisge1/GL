@@ -17,7 +17,7 @@ int main(void)
 	int dam = 0;
 
 	
-	while (S1<9876){
+	 while(3*n <9876){
 		
 		S1 = S1 + 3 * n;
 		n = n+1;
