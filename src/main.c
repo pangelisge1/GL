@@ -1,8 +1,7 @@
-#include <TP_lib.h>
+#include "TP_lib.h"
 
 int main(void){
 	
-	short int LancerDe (void);
 	short res;
 	long val=0;
 	
