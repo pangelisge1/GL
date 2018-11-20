@@ -9,8 +9,14 @@ int main(void)
 {
 	unsigned char bin[10] = {17, 19, 21, 23, 25, 27, 29, 31, 33, 35};
 	char i;
+	
+	
 	int sat[10] = {rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384};
 	char h;
+	
+	
+	int dist[10] = {rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384};
+	char g;
 	
 	for(i=0; i<SEUIL; i++)
 	{
@@ -38,5 +44,12 @@ int main(void)
 		else
 			sat[h] = sat[h];
 	}
-	return 0;
+	
+	for(g=1; g<10; g++)
+	{
+		dist[g] = dist[g] - dist[g-1];
+	}
+	
+		return 0;
+		
 }
