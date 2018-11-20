@@ -18,6 +18,10 @@ int main(void)
 	int dist[10] = {rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384};
 	char g;
 	
+	
+	int a[5] = {1, 5, 9, 8, 11};
+	
+	
 	for(i=0; i<SEUIL; i++)
 	{
 		if(bin[i] < SEUIL)
