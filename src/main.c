@@ -10,19 +10,16 @@ int main(void)
 	unsigned char bin[10] = {17, 19, 21, 23, 25, 27, 29, 31, 33, 35};
 	char i;
 	
-	
 	int sat[10] = {rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384};
-	char h;
 	
 	
 	int dist[10] = {rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384};
-	char g;
 	
 	
 	int a[5] = {1, 5, 9, 8, 11};
 	
 	
-	for(i=0; i<SEUIL; i++)
+	for(i=0; i<10; i++)
 	{
 		if(bin[i] < SEUIL)
 			bin[i] = 0;
@@ -31,29 +28,33 @@ int main(void)
 			bin[i] = 1;
 	}
 	
-	for(h=0; h<SEUILB; h++)
+	for(i=0; i<10; i++)
 	{
-		if(sat[h] < SEUILB)
-			sat[h] = SEUILB;
+		if(sat[i] < SEUILB)
+			sat[i] = SEUILB;
 		
+		else if(sat[i] > SEUILH)
+			sat[i] = SEUILH;
 		else
-			sat[h] = sat[h];
+			sat[i] = sat[i];
 	}
 	
-	for (h=0; h>SEUILH; h++)
+	for (i=0; i>10; i++)
 	{
-		if(sat[h] > SEUILH)
-			sat[h] = SEUILH;
+		if(sat[i] > SEUILH)
+			sat[i] = SEUILH;
 		
 		else
-			sat[h] = sat[h];
+			sat[i] = sat[i];
 	}
 	
-	for(g=1; g<10; g++)
+	for(i=1; i<10; i++)
 	{
-		dist[g] = dist[g] - dist[g-1];
+		dist[i] = dist[i] - dist[i-1];
 	}
+	
 	
 		return 0;
 		
 }
+
