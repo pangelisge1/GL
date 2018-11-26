@@ -15,17 +15,17 @@ int main(void)
 	int sat[10] = {rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384};
 	
 	
-	int dist[10] = {rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384};
+	int output_dist[10] = {rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384, rand()-16384};
 	
 	
-	unsigned char N;
+	unsigned char n;
 	int a[5] = {10,9,7,6,5};
 	int b[5];
 	
 	
 	int p = 5;
 	int mirror[6] = {0, 2, 4, 6, 8, 10};
-	unsigned char N_;
+	unsigned char n_;
 	
 	
 	
@@ -57,38 +57,25 @@ int main(void)
 	
 	
 	
-	for (i=0; i>10; i++)
-	{
-		if(sat[i] > SEUILH)
-			sat[i] = SEUILH;
-		
-		else
-			sat[i] = sat[i];
-	}
-	
-	
-	
-	
 	for(i=1; i<10; i++)
 	{
-		dist[i] = dist[i] - dist[i-1];
+		output_dist[i] = dist[i] - dist[i-1];
 	}
 	
 	
 	
 	
-	for(N=0; N<5; N++)
+	for(n=0; n<5; n++)
 	{
-		b[N] = a[4-N];
+		b[n] = a[4-n];
 	}
 	
 	
 	
 	
-	for(N_=0; N_<5; N_++)
+	for(n_=0; n_< 6/2; n_++)
 	{
-		mirror[N_] = mirror[N_ + p];
-		p = p - 2;
+		mirror[N_] = mirror[p]; p = p - 1;
 	}
 	
 		return 0;
