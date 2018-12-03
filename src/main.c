@@ -2,15 +2,9 @@
 
 int main(void)
 {
-     	 initialiserTirage();
 	 unsigned char j, i, nc = 0, t = 0, score = 0;
 	 unsigned char tirage[6];
-	 unsigned char joueur[6];
-	 
-	 for(j=0; j<6; j++)
-	 {
-		user[j] = tirerNumero();	 
-	 }
+	 unsigned char joueur[6] = {2,18,30,42,13,24};
 	 
 	 for(t=0; t<100; t++) 
 	 {
@@ -27,7 +21,7 @@ int main(void)
 	 	{
 	   		for (i=0; i<6; i++)  
 	  		{	   
-	   			if (user[j] == tirage[i])
+	   			if (joueur[j] == tirage[i])
 				{
 			  		nc++;
 				}	
