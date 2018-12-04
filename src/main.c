@@ -1,13 +1,19 @@
-#include "TP_lib.h"
+#include <ansi_c.h>
+#include "my_header.h"
 
-int main(void){
+int main(void)
+{
 	
-	short int LancerDe (void);
-	short resultat, i=0;
+	char nom[100];
+	char prenom[100];
+	char ans[100];
 	
-	while(i<10){
-		resultat = LancerDe();
-		i++;
-	}
+	
+	scanf("%s", nom);
+	scanf("%s", prenom);
+	 scanf("%s", ans);
+	
+	printf("%s %s, j'ai %s", nom, prenom, ans);
+	
 	return 0;
 }
